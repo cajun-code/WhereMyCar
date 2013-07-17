@@ -1,23 +1,155 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="czu-Ty-kcC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="5">
+        <!--Find Car View Controller - Find My Car-->
+        <scene sceneID="hlv-zZ-uYn">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                <viewController id="qN6-Sz-HhX" customClass="FindCarViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fdD-eV-mVg">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EcO-Ez-8nk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="519" id="Uf0-BB-aJo"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EcO-Ez-8nk" firstAttribute="leading" secondItem="fdD-eV-mVg" secondAttribute="leading" type="default" id="bb6-Ru-Izh"/>
+                            <constraint firstItem="EcO-Ez-8nk" firstAttribute="trailing" secondItem="fdD-eV-mVg" secondAttribute="trailing" type="default" id="oHd-eA-4MW"/>
+                            <constraint firstItem="EcO-Ez-8nk" firstAttribute="bottom" secondItem="fdD-eV-mVg" secondAttribute="bottom" type="default" id="son-nX-hYH"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Find My Car" id="ezb-fK-r4h"/>
+                    <connections>
+                        <outlet property="mapView" destination="EcO-Ez-8nk" id="qpG-ns-KgX"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNg-77-N4y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="491" y="263"/>
+        </scene>
+        <!--Car Parking View Controller - Mark My Car-->
+        <scene sceneID="Jfx-gM-JEe">
+            <objects>
+                <viewController id="T5u-oE-HtS" customClass="CarParkingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m0c-a6-3zQ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YO-Rn-m3t">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Get Location">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getLocation:" destination="T5u-oE-HtS" eventType="touchUpInside" id="n5C-ds-qdb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lattitude:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsE-13-nGH">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Longitude:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgH-uq-ey8">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note:" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxX-ty-Vov">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PU-2e-5Ji">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save Location">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveLocation:" destination="T5u-oE-HtS" eventType="touchUpInside" id="YSm-uO-dCr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bxX-ty-Vov" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="2S4-hi-knB"/>
+                            <constraint firstItem="4YO-Rn-m3t" firstAttribute="top" secondItem="m0c-a6-3zQ" secondAttribute="top" constant="193" id="7Vx-F7-eoE"/>
+                            <constraint firstAttribute="trailing" secondItem="0PU-2e-5Ji" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9oN-yx-MtF"/>
+                            <constraint firstItem="bxX-ty-Vov" firstAttribute="leading" secondItem="m0c-a6-3zQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="C20-Kc-Uch"/>
+                            <constraint firstItem="bxX-ty-Vov" firstAttribute="top" secondItem="m0c-a6-3zQ" secondAttribute="top" constant="147" id="KDj-E9-A32"/>
+                            <constraint firstItem="bsE-13-nGH" firstAttribute="top" secondItem="m0c-a6-3zQ" secondAttribute="top" constant="32" id="Ku2-p3-lyW"/>
+                            <constraint firstItem="xgH-uq-ey8" firstAttribute="top" secondItem="m0c-a6-3zQ" secondAttribute="top" constant="89" id="QnX-Bb-ddo"/>
+                            <constraint firstItem="0PU-2e-5Ji" firstAttribute="baseline" secondItem="4YO-Rn-m3t" secondAttribute="baseline" type="default" id="YwI-21-z8k"/>
+                            <constraint firstAttribute="trailing" secondItem="xgH-uq-ey8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dDJ-uQ-T3F"/>
+                            <constraint firstItem="bsE-13-nGH" firstAttribute="leading" secondItem="m0c-a6-3zQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dU0-9k-AFu"/>
+                            <constraint firstAttribute="trailing" secondItem="bsE-13-nGH" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gX9-fF-9q8"/>
+                            <constraint firstItem="xgH-uq-ey8" firstAttribute="leading" secondItem="m0c-a6-3zQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rEa-Gw-Cra"/>
+                            <constraint firstItem="4YO-Rn-m3t" firstAttribute="leading" secondItem="m0c-a6-3zQ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="wbw-aF-32x"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mark My Car" id="Lab-zi-Wqo"/>
+                    <connections>
+                        <outlet property="latitude" destination="bsE-13-nGH" id="zjj-ah-JFO"/>
+                        <outlet property="longitude" destination="xgH-uq-ey8" id="tQK-fh-BZO"/>
+                        <outlet property="note" destination="bxX-ty-Vov" id="qO9-KC-7F6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTN-0H-uMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="491" y="-390"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Qwu-SN-7uv">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="czu-Ty-kcC" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="sTg-RF-Nrx">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="T5u-oE-HtS" kind="relationship" relationship="viewControllers" id="qXn-FS-1tV"/>
+                        <segue destination="qN6-Sz-HhX" kind="relationship" relationship="viewControllers" id="5PX-wW-Pwe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YB5-fQ-DuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-43" y="-63"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CarParkingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CarParkingViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="getLocation:" candidateClass="UIButton"/>
+                <relationship kind="action" name="saveLocation:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="latitude" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="longitude" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="note" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="FindCarViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FindCarViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

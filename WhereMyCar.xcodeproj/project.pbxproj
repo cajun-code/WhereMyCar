@@ -17,12 +17,16 @@
 		CE7952D41795DBC80047319C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7952D31795DBC80047319C /* Default@2x.png */; };
 		CE7952D61795DBC80047319C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7952D51795DBC80047319C /* Default-568h@2x.png */; };
 		CE7952D91795DBC80047319C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7952D71795DBC80047319C /* MainStoryboard.storyboard */; };
-		CE7952DC1795DBC80047319C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7952DB1795DBC80047319C /* ViewController.m */; };
 		CE7952E41795DBC80047319C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7952E31795DBC80047319C /* SenTestingKit.framework */; };
 		CE7952E51795DBC80047319C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7952BF1795DBC80047319C /* UIKit.framework */; };
 		CE7952E61795DBC80047319C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7952C11795DBC80047319C /* Foundation.framework */; };
 		CE7952EE1795DBC80047319C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE7952EC1795DBC80047319C /* InfoPlist.strings */; };
 		CE7952F11795DBC80047319C /* WhereMyCarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7952F01795DBC80047319C /* WhereMyCarTests.m */; };
+		CE7952FC1795DC510047319C /* CarParkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7952FB1795DC510047319C /* CarParkingViewController.m */; };
+		CE7952FF1795DC7D0047319C /* FindCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7952FE1795DC7D0047319C /* FindCarViewController.m */; };
+		CE7953011795DDAC0047319C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7953001795DDAC0047319C /* MapKit.framework */; };
+		CE7953031795DDB70047319C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7953021795DDB70047319C /* CoreLocation.framework */; };
+		CE7953061795DFBF0047319C /* CarLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7953051795DFBF0047319C /* CarLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +54,20 @@
 		CE7952D31795DBC80047319C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CE7952D51795DBC80047319C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CE7952D81795DBC80047319C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		CE7952DA1795DBC80047319C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CE7952DB1795DBC80047319C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CE7952E21795DBC80047319C /* WhereMyCarTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereMyCarTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7952E31795DBC80047319C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		CE7952EB1795DBC80047319C /* WhereMyCarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhereMyCarTests-Info.plist"; sourceTree = "<group>"; };
 		CE7952ED1795DBC80047319C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE7952EF1795DBC80047319C /* WhereMyCarTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereMyCarTests.h; sourceTree = "<group>"; };
 		CE7952F01795DBC80047319C /* WhereMyCarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereMyCarTests.m; sourceTree = "<group>"; };
+		CE7952FA1795DC510047319C /* CarParkingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarParkingViewController.h; sourceTree = "<group>"; };
+		CE7952FB1795DC510047319C /* CarParkingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarParkingViewController.m; sourceTree = "<group>"; };
+		CE7952FD1795DC7D0047319C /* FindCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCarViewController.h; sourceTree = "<group>"; };
+		CE7952FE1795DC7D0047319C /* FindCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindCarViewController.m; sourceTree = "<group>"; };
+		CE7953001795DDAC0047319C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CE7953021795DDB70047319C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CE7953041795DFBF0047319C /* CarLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarLocation.h; sourceTree = "<group>"; };
+		CE7953051795DFBF0047319C /* CarLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarLocation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7953031795DDB70047319C /* CoreLocation.framework in Frameworks */,
+				CE7953011795DDAC0047319C /* MapKit.framework in Frameworks */,
 				CE7952C01795DBC80047319C /* UIKit.framework in Frameworks */,
 				CE7952C21795DBC80047319C /* Foundation.framework in Frameworks */,
 				CE7952C41795DBC80047319C /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +99,8 @@
 		CE7952B31795DBC70047319C = {
 			isa = PBXGroup;
 			children = (
+				CE7953021795DDB70047319C /* CoreLocation.framework */,
+				CE7953001795DDAC0047319C /* MapKit.framework */,
 				CE7952C51795DBC80047319C /* WhereMyCar */,
 				CE7952E91795DBC80047319C /* WhereMyCarTests */,
 				CE7952BE1795DBC80047319C /* Frameworks */,
@@ -120,9 +134,13 @@
 				CE7952CE1795DBC80047319C /* AppDelegate.h */,
 				CE7952CF1795DBC80047319C /* AppDelegate.m */,
 				CE7952D71795DBC80047319C /* MainStoryboard.storyboard */,
-				CE7952DA1795DBC80047319C /* ViewController.h */,
-				CE7952DB1795DBC80047319C /* ViewController.m */,
 				CE7952C61795DBC80047319C /* Supporting Files */,
+				CE7952FA1795DC510047319C /* CarParkingViewController.h */,
+				CE7952FB1795DC510047319C /* CarParkingViewController.m */,
+				CE7952FD1795DC7D0047319C /* FindCarViewController.h */,
+				CE7952FE1795DC7D0047319C /* FindCarViewController.m */,
+				CE7953041795DFBF0047319C /* CarLocation.h */,
+				CE7953051795DFBF0047319C /* CarLocation.m */,
 			);
 			path = WhereMyCar;
 			sourceTree = "<group>";
@@ -272,7 +290,9 @@
 			files = (
 				CE7952CC1795DBC80047319C /* main.m in Sources */,
 				CE7952D01795DBC80047319C /* AppDelegate.m in Sources */,
-				CE7952DC1795DBC80047319C /* ViewController.m in Sources */,
+				CE7952FC1795DC510047319C /* CarParkingViewController.m in Sources */,
+				CE7952FF1795DC7D0047319C /* FindCarViewController.m in Sources */,
+				CE7953061795DFBF0047319C /* CarLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
